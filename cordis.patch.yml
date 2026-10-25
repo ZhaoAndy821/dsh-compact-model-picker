@@ -1,0 +1,4 @@
+# dsh-compact-model-picker cordis bundle patch
+- insert:
+    - id: dsh-compact-model-picker
+      name: 'dsh-compact-model-picker'

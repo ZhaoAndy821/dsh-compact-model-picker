@@ -1,0 +1,48 @@
+{
+  "name": "dsh-compact-model-picker",
+  "version": "1.0.0",
+  "description": "DSH plugin: interactive model picker for context compaction (/compact) to avoid burning expensive primary model tokens on summarization.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "cordis",
+    "plugin",
+    "client-plugin",
+    "compaction",
+    "context",
+    "model-picker",
+    "cost-saving"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test test/index.test.mjs test/client.test.mjs"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZhaoAndy821/dsh-compact-model-picker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ZhaoAndy821/dsh-compact-model-picker/issues"
+  },
+  "homepage": "https://github.com/ZhaoAndy821/dsh-compact-model-picker#readme"
+}
