@@ -31,6 +31,11 @@ test("parseModelTarget handles various input formats", () => {
     provider: "openrouter",
     model: "anthropic/claude-3.5"
   });
+  // Space separation allows model IDs containing slashes (e.g. magpie routes).
+  assert.deepEqual(parseModelTarget("magpie antigravity/gemini-3.8-flash"), {
+    provider: "magpie",
+    model: "antigravity/gemini-3.8-flash"
+  });
 });
 
 test("formatCompactionError handles all known codes and fallback", () => {
